@@ -110,8 +110,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # Add footer at the bottom of the app
-st.markdown(
+    st.markdown(
     """
     <style>
     footer {visibility: hidden;}
