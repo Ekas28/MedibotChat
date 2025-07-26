@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 from huggingface_hub import InferenceClient
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 import warnings
 
