@@ -110,22 +110,25 @@ def main():
 
 if __name__ == "__main__":
     main()
-    st.markdown(
+    # Add footer at the bottom of the app
+st.markdown(
     """
     <style>
-    .footer {
+    footer {visibility: hidden;}
+    .custom-footer {
         position: fixed;
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: transparent;
         text-align: center;
         font-size: 12px;
         color: gray;
-        padding: 10px 0;
+        background: white;
+        padding: 8px 0;
+        border-top: 1px solid #e0e0e0;
     }
     </style>
-    <div class="footer">
+    <div class="custom-footer">
         Made by <b>Ekasj</b>
     </div>
     """,
