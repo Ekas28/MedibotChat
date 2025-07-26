@@ -36,7 +36,12 @@ def get_vectorstore():
     st.write("Files in db_faiss:", os.listdir("vectorstore/db_faiss"))
 
     if os.path.exists(DB_FAISS_PATH):
-        return FAISS.load_local(DB_FAISS_PATH, embedding_model)
+        try:
+            return FAISS.load_local(DB_FAISS_PATH, embedding_model, allow_dangerous_deserialization=True)
+        except Exception as e:
+            st.error(f"Failed to load FAISS index: {e}")
+            return None
+
     else:
         st.error("FAISS index not found. Please upload or build it.")
         return None
