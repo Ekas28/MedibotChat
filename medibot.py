@@ -69,7 +69,7 @@ def main():
     st.title("💊 MediBot - Medical Assistant")
     st.markdown(
         """
-        <p style="font-size: 12px; color: gray; margin-top: 2px; text-align: left;">
+        <p style="font-size: 12px; color: gray; margin-top: 2px; text-align: right;">
             Made by <b>Ekasjot Singh</b>
         </p>
         """,
