@@ -68,7 +68,12 @@ def query_mistral(prompt, history):
 def main():
     st.title("💊 MediBot - Medical Assistant")
     st.markdown(
-        "<p style='text-align: center; font-size: 12px; color: gray;'>Made by <b>Ekasj</b></p>",
+        """
+        <h1 style="margin-bottom: 0;">💊 MediBot - Medical Assistant</h1>
+        <p style="font-size: 12px; color: gray; margin-top: 2px; text-align: left;">
+            Made by <b>Ekasjot Singh</b>
+        </p>
+        """,
         unsafe_allow_html=True
     )
 
