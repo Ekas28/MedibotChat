@@ -111,9 +111,9 @@ def main():
 if __name__ == "__main__":
     main()
     st.markdown(
-        """
-        <style>
-        .footer {
+    """
+    <style>
+    .footer {
         position: fixed;
         left: 0;
         bottom: 0;
@@ -123,11 +123,11 @@ if __name__ == "__main__":
         font-size: 12px;
         color: gray;
         padding: 10px 0;
-        }
-        </style>
-        <div class="footer">
-        Made by <b>Ekasjot Singh</b>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    }
+    </style>
+    <div class="footer">
+        Made by <b>Ekasj</b>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
