@@ -20,13 +20,20 @@ hf_client = InferenceClient(model=HUGGINGFACE_REPO_ID, token=HF_TOKEN)
 # ==========================
 @st.cache_resource
 def get_vectorstore():
-     embedding_model = HuggingFaceEmbeddings(
+    # Force model to run on CPU
+    embedding_model = HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-MiniLM-L6-v2",
         model_kwargs={"device": "cpu"}  # ✅ CPU mode
     )
+
+    # If you have pre-built FAISS index:
+    DB_FAISS_PATH = "faiss_index"
     if os.path.exists(DB_FAISS_PATH):
-        return FAISS.load_local(DB_FAISS_PATH, embedding_model, allow_dangerous_deserialization=True)
-    return None
+        return FAISS.load_local(DB_FAISS_PATH, embedding_model)
+    else:
+        st.error("FAISS index not found. Please upload or build it.")
+        return None
+
 
 def set_custom_prompt(context, question):
     return f"""You are MediBot, a polite and professional medical assistant. Follow these rules:
