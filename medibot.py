@@ -20,7 +20,10 @@ hf_client = InferenceClient(model=HUGGINGFACE_REPO_ID, token=HF_TOKEN)
 # ==========================
 @st.cache_resource
 def get_vectorstore():
-    embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+     embedding_model = HuggingFaceEmbeddings(
+        model_name="sentence-transformers/all-MiniLM-L6-v2",
+        model_kwargs={"device": "cpu"}  # ✅ CPU mode
+    )
     if os.path.exists(DB_FAISS_PATH):
         return FAISS.load_local(DB_FAISS_PATH, embedding_model, allow_dangerous_deserialization=True)
     return None
