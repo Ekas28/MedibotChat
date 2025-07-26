@@ -57,13 +57,20 @@ Answer:
 """
 
 def query_mistral(prompt, history):
-    messages = [{"role": "system", "content": "You are a helpful medical assistant."}]
+    messages = [{"role": "system", "content": "You are a helpful medical assistant. Provide long, detailed responses with explanations and examples."}]
     for user_msg, bot_msg in history:
         messages.append({"role": "user", "content": user_msg})
         messages.append({"role": "assistant", "content": bot_msg})
     messages.append({"role": "user", "content": prompt})
-    response = hf_client.chat_completion(model=HUGGINGFACE_REPO_ID, messages=messages)
+
+    response = hf_client.chat_completion(
+        model=HUGGINGFACE_REPO_ID,
+        messages=messages,
+        max_tokens=800,  # Longer answers
+        temperature=0.6,  # Balanced creativity
+    )
     return response.choices[0].message["content"]
+
 
 def main():
     st.title("💊 MediBot - Medical Assistant")
