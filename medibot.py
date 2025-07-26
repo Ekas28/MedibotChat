@@ -67,6 +67,10 @@ def query_mistral(prompt, history):
 
 def main():
     st.title("💊 MediBot - Medical Assistant")
+    st.markdown(
+        "<p style='text-align: center; font-size: 12px; color: gray;'>Made by <b>Ekasj</b></p>",
+        unsafe_allow_html=True
+    )
 
     if 'messages' not in st.session_state:
         st.session_state.messages = []
@@ -110,26 +114,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-    st.markdown(
-    """
-    <style>
-    footer {visibility: hidden;}
-    .custom-footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        font-size: 12px;
-        color: gray;
-        background: white;
-        padding: 8px 0;
-        border-top: 1px solid #e0e0e0;
-    }
-    </style>
-    <div class="custom-footer">
-        Made by <b>Ekasj</b>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+   
+
