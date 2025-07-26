@@ -112,7 +112,20 @@ if __name__ == "__main__":
     main()
     st.markdown(
         """
-        <div style='text-align: center; font-size: 12px; color: gray; margin-top: 20px;'>
+        <style>
+        .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: transparent;
+        text-align: center;
+        font-size: 12px;
+        color: gray;
+        padding: 10px 0;
+        }
+        </style>
+        <div class="footer">
         Made by <b>Ekasjot Singh</b>
         </div>
         """,
