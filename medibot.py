@@ -5,6 +5,8 @@ from langchain.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 import warnings
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
 warnings.filterwarnings("ignore", category=FutureWarning, module="torch")
 
 # ✅ Load HuggingFace token from Streamlit secrets
