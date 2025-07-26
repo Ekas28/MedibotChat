@@ -29,11 +29,11 @@ def get_vectorstore():
     )
 
     # If you have pre-built FAISS index:
-    DB_FAISS_PATH = "faiss_index"
-    st.write("Current Working Directory:", os.getcwd())
-    st.write("Files in Current Directory:", os.listdir())
-    st.write("Files in vectorstore:", os.listdir("vectorstore") if os.path.exists("vectorstore") else "No vectorstore folder")
-    st.write("Files in db_faiss:", os.listdir("vectorstore/db_faiss"))
+    DB_FAISS_PATH = "DB_FAISS_PATH = "vectorstore/db_faiss"
+    # st.write("Current Working Directory:", os.getcwd())
+    # st.write("Files in Current Directory:", os.listdir())
+    # st.write("Files in vectorstore:", os.listdir("vectorstore") if os.path.exists("vectorstore") else "No vectorstore folder")
+    # st.write("Files in db_faiss:", os.listdir("vectorstore/db_faiss"))
 
     if os.path.exists(DB_FAISS_PATH):
         try:
