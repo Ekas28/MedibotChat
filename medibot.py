@@ -110,3 +110,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+    st.markdown(
+        """
+        <div style='text-align: center; font-size: 12px; color: gray; margin-top: 20px;'>
+        Made by <b>Ekasjot Singh</b>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
