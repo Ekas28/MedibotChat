@@ -30,6 +30,10 @@ def get_vectorstore():
 
     # If you have pre-built FAISS index:
     DB_FAISS_PATH = "faiss_index"
+    st.write("Current Working Directory:", os.getcwd())
+    st.write("Files in Current Directory:", os.listdir())
+    st.write("Files in vectorstore:", os.listdir("vectorstore") if os.path.exists("vectorstore") else "No vectorstore folder")
+
     if os.path.exists(DB_FAISS_PATH):
         return FAISS.load_local(DB_FAISS_PATH, embedding_model)
     else:
