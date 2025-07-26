@@ -62,7 +62,7 @@ def query_mistral(prompt, history):
         messages.append({"role": "user", "content": user_msg})
         messages.append({"role": "assistant", "content": bot_msg})
     messages.append({"role": "user", "content": prompt})
-    response = hf_client.chat_completion(model=HUGGINGFACE_REPO_ID, messages=messages)
+    # response = hf_client.chat_completion(model=HUGGINGFACE_REPO_ID, messages=messages)
     response = hf_client.chat_completion(
         model=HUGGINGFACE_REPO_ID,
         messages=messages,
