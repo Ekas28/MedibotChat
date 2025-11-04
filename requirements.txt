@@ -1,10 +1,9 @@
-streamlit
 python-dotenv
-huggingface_hub
-faiss-cpu
-langchain-community
-langchain-huggingface
-sentence-transformers
-torch==2.7.1
-torchvision==0.22.1
 streamlit==1.39.0
+langchain
+langchain-community
+sentence-transformers
+faiss-cpu
+torch
+torchvision
+huggingface_hub
