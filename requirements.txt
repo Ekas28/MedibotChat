@@ -1,13 +1,23 @@
-streamlit
-python-dotenv
-huggingface_hub
-faiss-cpu
-langchain-community
-langchain-huggingface
-sentence-transformers
-torch==2.7.1
-torchvision==0.22.1
+
 streamlit==1.39.0
+
+# LangChain
+langchain==0.2.14
+langchain-community==0.2.12
+langchain-huggingface==0.0.3
+
+# Embeddings
+sentence-transformers==2.7.0
+torch==2.3.1
+transformers==4.44.2
+huggingface-hub==0.24.6
+accelerate==0.33.0
+
+# Vector db
+faiss-cpu==1.8.0.post1
+chromadb==0.5.5
+
+python-dotenv
 
 
 
